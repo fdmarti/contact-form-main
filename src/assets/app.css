@@ -1,0 +1,145 @@
+.card-form {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 50px 30px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.card-form h1 {
+  color: var(--dark-grey);
+  margin-bottom: 20px;
+}
+
+.block-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.block-input label {
+  font-size: 14px;
+  color: var(--dark-grey);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.radio-block {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-inputs {
+  width: 100%;
+}
+
+.radio-inputs input {
+  display: none;
+}
+
+.radio-inputs label {
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-inputs label span {
+  left: 30px;
+  position: relative;
+}
+
+.radio-inputs label:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--medium-grey);
+  background-color: var(--white);
+  transition: all 0.2s;
+}
+
+.radio-inputs input:checked + label:before {
+  background-color: var(--green);
+}
+
+.radio-inputs input:checked + label {
+  background-color: var(--light--green);
+}
+
+.radio-inputs label:hover {
+  cursor: pointer;
+  background-color: var(--light--green);
+}
+
+.check-box-consent {
+  display: none;
+}
+
+.consent-label {
+  width: auto;
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  max-width: 290px;
+}
+
+.consent-label:hover {
+  cursor: pointer;
+}
+
+.consent-label::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -25px;
+  top: 0;
+  border: 1px solid var(--medium-grey);
+  transition: all 0.2s;
+}
+
+.check-box-consent:checked + .consent-label:before {
+  background-color: var(--green);
+  content: '✓';
+  color: var(--white);
+  font-size: 12px;
+  padding-top: 1px;
+  padding-left: 4px;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 800;
+}
+
+.error {
+  border: 1px solid var(--red) !important;
+}
+
+.concept {
+  left: 0;
+}
+
+@media (max-width:763px) {
+  .block-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .radio-block {
+    flex-direction: column;
+  }
+}
